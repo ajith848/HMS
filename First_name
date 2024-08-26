@@ -1,0 +1,19 @@
+from rest_framework import viewsets
+from .models import *
+from .serializers import *
+
+class PatientViewSet(viewsets.ModelViewSet):
+    queryset = Patient.objects.all()
+    serializer_class = PatientSerializer
+
+
+class ServiceRequestViewSet(viewsets.ModelViewSet):
+    queryset = ServiceRequest.objects.all()
+    serializer_class = ServiceRequestSerializer
+
+class Notificationviewset(viewsets.ModelViewSet):
+    queryset = Notification.objects.all()
+    serializer_class = NotificationSerializer
+
+
+
